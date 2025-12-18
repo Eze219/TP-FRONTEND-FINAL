@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgba(158, 20, 20, 1);
+    background-image: radial-gradient(circle, rgba(158, 20, 20, 1) 0%, rgba(53, 2, 2, 1) 100%);
+}
+
+/* Fuentes */
+.lexend {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.funnel-display {
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+/* Footer */
+footer {
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    border-top: 1px solid rgba(255, 253, 253, 0.062);
+}
+
+.home footer, .club footer, .contact footer, .noticias footer, .shop footer, .socios footer {
+    position: static;
+}
+
+footer:hover {
+    box-shadow: 0 -6px 10px rgba(0,0,0,0.4);
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20px;
+    padding: 0 20px;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-left img {
+    height: 60px;
+}
+
+.footer-center h3 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.footer-right a {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-right a:hover {
+    color: #000;
+}
+
+/* Tuve que corregir porque se me desfazaba el footer del vw */
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+footer {
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+
+footer hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 12px auto 8px;
+    width: 90%;
+}
+
+.footer-copy {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Boton whatsapp */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #20b358;
+  transform: scale(1.1);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        width: 95vw;
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .footer-center h3 {
+        font-size: 28px;
+    }
+
+    .footer-left img {
+        height: 50px;
+    }
+
+    .footer-right a {
+        font-size: 18px;
+    }
+    
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 360px) {
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        padding-bottom: 5px;
+    }
+
+    .footer-left img {
+        height: 40px;
+    }
+
+    .footer-center h3 {
+        font-size: 20px;
+    }
+
+    .footer-right {
+        gap: 0;
+    }
+
+    .footer-right a {
+        font-size: 16px;
+        margin: 0 8px;
+    }
+}
